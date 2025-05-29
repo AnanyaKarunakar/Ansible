@@ -1,5 +1,6 @@
 - name: nginx install and run
-  hosts: frontend
+  hosts: frontend, local
+  connection: local  # No need for username and password with local connection
   tasks:
   - name: install nginx server
     ansible.builtin.package:
