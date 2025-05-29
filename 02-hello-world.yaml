@@ -1,7 +1,10 @@
-- name: hello world
-  hosts: local
-  connection: local # No need of username and paasword
+---
+- name: Hello World Playbook
+  hosts: localhost
+  connection: local  # No need for username and password with local connection
+  gather_facts: false  # Skips fact collection since it's not needed
+
   tasks:
-  - name: print hello world
-    ansible.builtin.debug:
-      msg: "Hello World"
+    - name: Print Hello World
+      ansible.builtin.debug:
+        msg: "Hello World"
