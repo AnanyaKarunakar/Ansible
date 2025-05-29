@@ -18,7 +18,7 @@ fi
 
 echo -e "$Y Ansible not found. Installing Ansible...$N"
 # Enable EPEL and install Ansible
-sudo yum install -y epel-release &>dev/null
+sudo yum install -y epel-release &>/dev/null
 if [ $? -ne 0 ]; then
     echo -e "$R Failed to enable EPEL repository. Exiting $N"
     exit 1
