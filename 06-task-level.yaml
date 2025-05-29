@@ -1,0 +1,16 @@
+- name: play level variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: AWS with DevOps # equal to CURSE=Ansible in shell, shell we refer $VAR or ${VAR}
+  	DURATION: 10HR
+	  TRAINER: Sivakumar
+  tasks:
+  - name: print course information
+    vars:
+	    COURSE: Ansible
+    ansible.builtin.debug:  #vars referance should be in ""
+	  msg: "Hello {{COURSE}}, Course Duration: {{DURATION}}, Trainer is {{TRAINER}}"
+  - name: print course information
+    ansible.builtin.debug:  #vars referance should be in ""
+	  msg: "Hello {{COURSE}}, Course Duration: {{DURATION}}, Trainer is {{TRAINER}}"
