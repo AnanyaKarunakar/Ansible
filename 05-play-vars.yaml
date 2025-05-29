@@ -7,6 +7,5 @@
     TRAINER: Sivakumar
   tasks:
   - name: print course information
-    ansible.builtin.debug:
-	#vars referance should be in ""
+    ansible.builtin.debug:	#vars referance should be in ""
       msg: "Hello {{COURSE}}, Course Duration: {{DURATION}}, Trainer is {{TRAINER}}"
