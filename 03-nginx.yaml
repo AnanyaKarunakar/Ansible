@@ -1,5 +1,5 @@
 - name: nginx install and run
-  hosts: frontend, local
+  hosts: local
   connection: local  # No need for username and password with local connection
   tasks:
   - name: install nginx server
