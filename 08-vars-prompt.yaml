@@ -8,6 +8,7 @@
 	
   - name: PASSWORD
     prompt: please enter your password   
+    private: true
   tasks:
   - name: printing user information
     ansible.builtin.debug:
