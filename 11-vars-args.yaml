@@ -1,4 +1,4 @@
-- nam: variables from inventotry
+- name: variables from inventotry
   hosts: local
   connection: local
   tasks:
