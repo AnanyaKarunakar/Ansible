@@ -11,3 +11,7 @@
       name: mongodb-org
       state: present
 
+- name: Copy MongoDB repo file
+  copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
