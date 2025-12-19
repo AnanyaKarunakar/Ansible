@@ -1,14 +1,29 @@
 - name: nginx install and run
   hosts: local
-  connection: local  # No need for username and password with local connection
+  connection: local
   tasks:
-  - name: install nginx server
+  - name: install inginx server
     ansible.builtin.package:
       name: nginx
       state: present
-
+    
   - name: start nginx
-    ansible.builtin.service:
+    ansible.builtin.package:
       name: nginx
       state: started
       enabled: yes
+
+# - name: nginx install and run
+#   hosts: local
+#   connection: local  # No need for username and password with local connection
+#   tasks:
+#   - name: install nginx server
+#     ansible.builtin.package:
+#       name: nginx
+#       state: present
+
+#   - name: start nginx
+#     ansible.builtin.service:
+#       name: nginx
+#       state: started
+#       enabled: yes
