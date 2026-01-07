@@ -1,9 +1,11 @@
-- name: ping the server
+- name: ping and message the server
   hosts: web
   tasks: #list of tasks
-  - name: ping the server
+  - name: message
     ansible.builtin.debug:
       msg: 'Hello-Mike-Check'
+  - name: ping the server
+    ansible.builtin.ping:
 
 # Comment
 # Trail 
