@@ -3,7 +3,7 @@
   tasks: #list of tasks
   - name: ping the server
     ansible.builtin.ping:
-      msg: "Hello-Mike-Check"
+      msg: 'Hello-Mike-Check'
 
 # Comment
 # Trail 
