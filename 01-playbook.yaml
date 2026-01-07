@@ -2,7 +2,7 @@
   hosts: web
   tasks: #list of tasks
   - name: ping the server
-    ansible.builtin.ping:
+    ansible.builtin.debug:
       msg: 'Hello-Mike-Check'
 
 # Comment
