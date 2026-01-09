@@ -8,7 +8,7 @@
   tasks:
   - name: print course information
     ansible.builtin.debug:	#vars referance should be in ""
-      msg: "Hello {{COURSE}}, Course Duration: {{DURATION}}, Trainer is {{TRAINER}}"
+      var: "Hello {{COURSE}}, Course Duration: {{DURATION}}, Trainer is {{TRAINER}}"
 
   - name: print course information again
     ansible.builtin.debug:	#vars referance should be in ""
