@@ -2,9 +2,12 @@
 - name: Hello World Playbook
   hosts: localhost
   connection: local  # No need for username and password with local connection
-  gather_facts: false  # Skips fact collection since it's not needed
+  gather_facts: true  # Skips fact collection since it's not needed
 
   tasks:
     - name: Print Hello World
       ansible.builtin.debug:
         msg: "Hello World"
+
+# ---
+# - name: Install and start nginx
