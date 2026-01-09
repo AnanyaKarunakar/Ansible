@@ -10,9 +10,11 @@
     - shell
     - Ansible
     CONCETPS: # map or dictionary or object. referred like {}
-      CI: Jenkins
+      CI/CD: Jenkins, ArgoCD
       SCRIPTING: "Shell, Ansible, Terraform, Python"
   tasks:
   - name: print course information
     ansible.builtin.debug:
       msg: "Course is: {{ COURSE }}, Duration: {{ DURATION }}, is live?: {{ IS_LIVE }}, Tools are: {{ TOOLS }}, Concepts are: {{ CONCETPS }}"
+
+#"msg": "Course is: DevSecOps with AWS, Duration: 120, is live?: True, Tools are: ['Linux', 'shell', 'Ansible'], Concepts are: {'CI': 'Jenkins', 'SCRIPTING': 'Shell, Ansible, Terraform, Python'}"
