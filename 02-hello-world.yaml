@@ -5,6 +5,11 @@
   gather_facts: true  # Skips fact collection since it's not needed
 
   tasks:
+    - name: Finding the version of Targated node
+      debug: 
+        var: "Version:{{ ansible_distribution_version }}"
+
+
     - name: Print Hello World
       ansible.builtin.debug:
         msg: "Hello World"
