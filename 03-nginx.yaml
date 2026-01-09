@@ -3,12 +3,12 @@
   connection: local
   tasks:
   - name: install inginx server
-    ansible.builtin.package:
+    ansible.builtin.package:      # install nginx -y
       name: nginx
       state: present
     
   - name: start nginx
-    ansible.builtin.package:
+    ansible.builtin.service:      # systemctl start and enable nginx
       name: nginx
       state: started
       enabled: yes
