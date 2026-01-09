@@ -3,7 +3,7 @@
   connection: local
   vars:
     COURSE: Ansible # equal to CURSE=Ansible in shell, shell we refer $VAR or ${VAR}
-    DURATION: 10HR
+    DURATION: 10
     TRAINER: Sivakumar
   tasks:
   - name: print course information
