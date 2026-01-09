@@ -2,21 +2,17 @@
   hosts: frontend
   become: yes
   tasks:
-  # - name: print facts
-    
-  - name: install nginx if redhat
+  - name: print facts
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
-
+      
+  - name: install nginx if redhat
     ansible.builtin.dnf:
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
 
   - name: install nginx if debian
-    ansible.builtin.debug:
-      msg: "{{ ansible_facts }}"
-
     ansible.builtin.apt:
       name: nginx
       state: present
