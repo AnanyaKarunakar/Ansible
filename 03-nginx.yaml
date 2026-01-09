@@ -1,6 +1,6 @@
 - name: nginx install and run
-  hosts: local
-  connection: local
+  hosts: frontend
+  connection: frontend
   tasks:
   - name: install inginx server
     ansible.builtin.package:      # install nginx -y
